@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1057665515457",
+    "project_id": "moviechat-9cd22",
+    "storage_bucket": "moviechat-9cd22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057665515457:android:11c79f9f8d95d536533940",
+        "android_client_info": {
+          "package_name": "com.shaiungar.movie_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1057665515457-4i8t5gitakqmmmism6mvb8m7sae0aecq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_K4QdiD3YiXBNh2MMQSz6RSAHwD5gNJ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1057665515457-4i8t5gitakqmmmism6mvb8m7sae0aecq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
