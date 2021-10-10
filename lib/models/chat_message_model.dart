@@ -1,6 +1,5 @@
-
 class ChatMessage {
-  final String ?id; //will be null for new objects
+  final String? id; //will be null for new objects
   final DateTime date;
   final String movieChatId;
   final String userName;
