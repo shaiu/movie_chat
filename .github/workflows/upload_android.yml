@@ -1,0 +1,29 @@
+- name: Upload Android Release to Play Store
+  # You may pin to the exact commit or the version.
+  # uses: r0adkll/upload-google-play@8c2ebfdb6e1b439d3a31d35772b3f0f489d688c9
+  uses: r0adkll/upload-google-play@v1.0.16
+  with:
+    # The service account json private key file to authorize the upload request
+    serviceAccountJson: # optional
+    # The raw json text of the service account private key to authorize the upload request
+    serviceAccountJsonPlainText: # optional
+    # The package name, or Application Id, of the app you are uploading
+    packageName: 
+    # The Android release file to upload (.apk or .aab)
+    releaseFile: # optional
+    # The Android release file(s) to upload (.apk or .aab). Separated by  a ',' for multiple artifacts. Supports glob
+    releaseFiles: # optional
+    # The name of this release. If not set it's generated automatically from the APKs versionName
+    releaseName: # optional
+    # The track in which you want to assign the uploaded app.
+    track: # default is production
+    # In-app update priority of the release. All newly added APKs in the release will be considered at this priority. Can take values in the range [0, 5], with 5 the highest priority. Defaults to 0.
+    inAppUpdatePriority: # optional, default is 0
+    # Portion of users who should get the staged version of the app. Accepts values between 0.0 and 1.0 (exclusive-exclusive).
+    userFraction: # optional
+    # Release status. This can be set to 'draft' to complete the release at some other time.
+    status: # optional
+    # The directory of localized whats new files
+    whatsNewDirectory: # optional
+    # The mapping.txt file used to de-obfuscate your stack traces from crash reports
+    mappingFile: # optional
