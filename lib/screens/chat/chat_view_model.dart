@@ -1,6 +1,7 @@
 import 'package:movie_chat/models/chat_message_model.dart';
 import 'package:movie_chat/repo/chat_repo.dart';
 import 'package:movie_chat/repo/user_repo.dart';
+import 'package:movie_chat/service/notification.dart';
 
 class ChatViewModel {
   final ChatRepo _chatRepo;
@@ -21,6 +22,7 @@ class ChatViewModel {
     if (index == -1) {
       //message is new, append to list
       _messages.add(message);
+      showNotification(title: message.userName, body: message.message, payload: "payload");
     } else {
       _messages[index] = message; //update existing message
     }

@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:movie_chat/screens/home_page.dart';
 import 'package:movie_chat/screens/sign/sign_in_page.dart';
 import 'package:movie_chat/service/authentication.dart';
+import 'package:movie_chat/service/notification.dart';
 import 'package:provider/provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  await initialize();
   runApp(MyApp());
 }
 
