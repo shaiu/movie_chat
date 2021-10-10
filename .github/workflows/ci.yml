@@ -51,7 +51,7 @@ jobs:
     - uses: r0adkll/upload-google-play@v1
       name: Upload Android Release to Play Store
       with:
-        serviceAccountJson: ${{secret.SERVICEACCOUNTJSON}}
+        serviceAccountJson: ${{ secret.SERVICEACCOUNTJSON }}
         packageName: com.shaiungar.movie_chat
         releaseFiles: apk,aab
         
