@@ -40,8 +40,8 @@ class MovieChatPage extends StatelessWidget {
                                 color: Colors.pink[50],
                               ),
                               child: Row(
-                                children: <Widget>[
-                                  const Icon(
+                                children: const <Widget>[
+                                  Icon(
                                     Icons.add,
                                     color: Colors.pink,
                                     size: 20,

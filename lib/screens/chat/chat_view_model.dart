@@ -9,7 +9,7 @@ class ChatViewModel {
 
   ChatViewModel(this._chatRepo, this._userRepo);
 
-  List<ChatMessage> _messages = [];
+  final List<ChatMessage> _messages = [];
 
   Stream<List<ChatMessage>> getChatMessages(String chatRoomId) {
     return _chatRepo
@@ -32,7 +32,7 @@ class ChatViewModel {
     return _messages;
   }
 
-  void saveMessage(String movieChatId, String message) async {
+  Future<void> saveMessage(String movieChatId, String message) async {
     final user = await _userRepo.getUser();
     _chatRepo.saveMessage(
       ChatMessage(

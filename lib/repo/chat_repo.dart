@@ -5,7 +5,7 @@ class ChatRepo {
   final CollectionReference _ref =
       FirebaseFirestore.instance.collection('chat');
 
-  void saveMessage(ChatMessage message) async {
+  Future<void> saveMessage(ChatMessage message) async {
     await _ref.add(message.toMap());
   }
 

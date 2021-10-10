@@ -38,12 +38,12 @@ class _HomePageState extends State<HomePage> {
         unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w600),
         type: BottomNavigationBarType.fixed,
         currentIndex: _selectedIndex,
-        items: [
-          const BottomNavigationBarItem(
+        items: const [
+          BottomNavigationBarItem(
             icon: Icon(Icons.message),
             label: "Movies",
           ),
-          const BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.account_box),
             label: "Profile",
           ),
