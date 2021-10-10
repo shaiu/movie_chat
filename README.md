@@ -1,3 +1,5 @@
+[![Flutter CI](https://github.com/shaiu/movie_chat/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/shaiu/movie_chat/actions/workflows/ci.yml)
+
 # movie_chat
 
 Movie Chat app
