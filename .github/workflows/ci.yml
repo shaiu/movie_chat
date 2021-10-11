@@ -44,7 +44,7 @@ jobs:
       - run: flutter test
 
       # Build aab.
-      - run: echo $KEY_JKS > ./android/key.jks && flutter build appbundle --release
+      - run: echo $KEY_JKS | base64 --decode > android/key.jks && flutter build appbundle --release
 
       # Upload generated apk to the artifacts.
       - uses: actions/upload-artifact@v1
