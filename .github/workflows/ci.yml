@@ -23,10 +23,6 @@ jobs:
 
       # Setup the flutter environment.
       - uses: subosito/flutter-action@v1
-        env:
-          KEY_JKS: ${{ secrets.KEY_JKS }}
-          KEY_PASSWORD: ${{ secrets.ALIAS_PASSWORD }}
-          ALIAS_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         with:
           channel: 'stable' # 'dev', 'alpha', default to: 'stable'
           # flutter-version: '1.12.x' # you can also specify exact version of flutter
@@ -44,7 +40,11 @@ jobs:
       - run: flutter test
 
       # Build aab.
-      - run: echo $KEY_JKS | base64 --decode > android/key.jks && flutter build appbundle --release
+      - run: echo $KEY_JKS > android/key.jks && flutter build appbundle --release
+        env:
+          KEY_JKS: ${{ secrets.KEY_JKS }}
+          KEY_PASSWORD: ${{ secrets.ALIAS_PASSWORD }}
+          ALIAS_PASSWORD: ${{ secrets.KEY_PASSWORD }}
 
       # Upload generated apk to the artifacts.
       - uses: actions/upload-artifact@v1
