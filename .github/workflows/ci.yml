@@ -46,12 +46,12 @@ jobs:
     - uses: actions/upload-artifact@v1
       with:
         name: release-apk
-        path: build/app/outputs/bundle/release/app.aab
+        path: build/app/outputs/bundle/release/app-release.aab
         
     - uses: r0adkll/upload-google-play@v1
       name: Upload Android Release to Play Store
       with:
         serviceAccountJsonPlainText: ${{ secrets.SERVICEACCOUNTJSON }}
         packageName: com.shaiungar.movie_chat
-        releaseFiles: build/app/outputs/bundle/release/app.aab
+        releaseFiles: build/app/outputs/bundle/release/app-release.aab
         track: internal
