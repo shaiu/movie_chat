@@ -10,11 +10,7 @@ Future initialize() async {
 
   //Initialization Settings for iOS
   const IOSInitializationSettings initializationSettingsIOS =
-      IOSInitializationSettings(
-    requestSoundPermission: false,
-    requestBadgePermission: false,
-    requestAlertPermission: false,
-  );
+      IOSInitializationSettings();
 
   //InitializationSettings for initializing settings for both platforms (Android & iOS)
   const InitializationSettings initializationSettings = InitializationSettings(

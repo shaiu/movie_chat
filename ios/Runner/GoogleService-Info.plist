@@ -3,32 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>$(CLIENT_ID)</string>
+	<string>1057665515457-4tiumr7mdj3m9uuti974qsj8nj20hb4m.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>$(REVERSED_CLIENT_ID)</string>
+	<string>com.googleusercontent.apps.1057665515457-4tiumr7mdj3m9uuti974qsj8nj20hb4m</string>
 	<key>API_KEY</key>
-	<string>$(API_KEY)</string>
+	<string>AIzaSyAQJEKCs2LOlc2B9Prx6cJiIhgHA-f3Y30</string>
 	<key>GCM_SENDER_ID</key>
-	<string>$(GCM_SENDER_ID)</string>
+	<string>1057665515457</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>$(BUNDLE_ID)</string>
+	<string>com.shaiungar.movieChat</string>
 	<key>PROJECT_ID</key>
-	<string>$(PROJECT_ID)</string>
+	<string>moviechat-9cd22</string>
 	<key>STORAGE_BUCKET</key>
-	<string>$(STORAGE_BUCKET)</string>
+	<string>moviechat-9cd22.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>$(GOOGLE_APP_ID)</string>
+	<string>1:1057665515457:ios:c770ceeaeb04363b533940</string>
 </dict>
 </plist>
