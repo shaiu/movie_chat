@@ -6,7 +6,7 @@ final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
 Future initialize() async {
   //Initialization Settings for Android
   const AndroidInitializationSettings initializationSettingsAndroid =
-      AndroidInitializationSettings('movie_icon');
+      AndroidInitializationSettings('ic_launcher_foreground');
 
   //Initialization Settings for iOS
   const IOSInitializationSettings initializationSettingsIOS =
