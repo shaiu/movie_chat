@@ -29,7 +29,6 @@ const NotificationDetails notificationDetails = NotificationDetails(
   android: AndroidNotificationDetails(
     'movie_chat_channel',
     'MovieChatChannel',
-    'MovieChatChannel',
   ),
   iOS: IOSNotificationDetails(),
 );
