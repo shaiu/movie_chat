@@ -18,24 +18,26 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-        providers: [
-          Provider<AuthService>(
-              create: (_) => AuthService(
-                    FirebaseAuth.instance,
-                  )),
-          StreamProvider(
-            create: (context) => context.read<AuthService>().authStateChanges,
-            initialData: null,
-          )
-        ],
-        child: MaterialApp(
-          title: 'Flutter Demo',
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
+      providers: [
+        StreamProvider(
+          create: (context) => context.read<AuthService>().authStateChanges,
+          initialData: null,
+        ),
+        Provider<AuthService>(
+          create: (_) => AuthService(
+            FirebaseAuth.instance,
           ),
-          debugShowCheckedModeBanner: false,
-          home: AuthenticationWrapper(),
-        ));
+        )
+      ],
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        debugShowCheckedModeBanner: false,
+        home: AuthenticationWrapper(),
+      ),
+    );
   }
 }
 

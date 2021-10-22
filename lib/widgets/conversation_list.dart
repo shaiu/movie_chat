@@ -5,20 +5,28 @@ class MovieChatList extends StatelessWidget {
   final String name;
   final String description;
   final String imageUrl;
-  const MovieChatList(
-      {required this.name, required this.description, required this.imageUrl});
+  const MovieChatList({
+    required this.name,
+    required this.description,
+    required this.imageUrl,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return ChatDetailPage(
-            chatRoomId: name,
-            description: description,
-            imageUrl: imageUrl,
-          );
-        }));
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) {
+              return ChatDetailPage(
+                chatRoomId: name,
+                description: description,
+                imageUrl: imageUrl,
+              );
+            },
+          ),
+        );
       },
       child: Container(
         padding:
@@ -51,9 +59,10 @@ class MovieChatList extends StatelessWidget {
                           Text(
                             description,
                             style: TextStyle(
-                                fontSize: 13,
-                                color: Colors.grey.shade600,
-                                fontWeight: FontWeight.normal),
+                              fontSize: 13,
+                              color: Colors.grey.shade600,
+                              fontWeight: FontWeight.normal,
+                            ),
                           ),
                         ],
                       ),

@@ -14,7 +14,9 @@ Future initialize() async {
 
   //InitializationSettings for initializing settings for both platforms (Android & iOS)
   const InitializationSettings initializationSettings = InitializationSettings(
-      android: initializationSettingsAndroid, iOS: initializationSettingsIOS);
+    android: initializationSettingsAndroid,
+    iOS: initializationSettingsIOS,
+  );
 
   await flutterLocalNotificationsPlugin.initialize(
     initializationSettings,

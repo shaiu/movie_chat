@@ -12,10 +12,11 @@ class MovieChatRepo {
       yield snapshot.docs
           .map(
             (doc) => MovieChat(
-                id: doc.id,
-                name: doc['name'] as String,
-                description: doc['description'] as String,
-                imagePath: doc['image_path'] as String),
+              id: doc.id,
+              name: doc['name'] as String,
+              description: doc['description'] as String,
+              imagePath: doc['image_path'] as String,
+            ),
           )
           .toList();
     }

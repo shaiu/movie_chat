@@ -11,10 +11,11 @@ class ChatDetailPage extends StatelessWidget {
   final String description;
   final String imageUrl;
 
-  ChatDetailPage(
-      {required this.chatRoomId,
-      required this.description,
-      required this.imageUrl});
+  ChatDetailPage({
+    required this.chatRoomId,
+    required this.description,
+    required this.imageUrl,
+  });
   final viewModel = ChatViewModel(ChatRepo(), UserRepo());
   final myController = TextEditingController();
 
@@ -57,7 +58,9 @@ class ChatDetailPage extends StatelessWidget {
                       Text(
                         chatRoomId,
                         style: const TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.w600),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                       const SizedBox(
                         height: 6,
@@ -65,7 +68,9 @@ class ChatDetailPage extends StatelessWidget {
                       Text(
                         description,
                         style: TextStyle(
-                            color: Colors.grey.shade600, fontSize: 13),
+                          color: Colors.grey.shade600,
+                          fontSize: 13,
+                        ),
                       ),
                     ],
                   ),
@@ -105,8 +110,11 @@ class ChatDetailPage extends StatelessWidget {
                                   const TextStyle(fontWeight: FontWeight.bold),
                             ),
                             const SizedBox(width: 8),
-                            Text(DateFormat('MMM d, h:mm a')
-                                .format(snapshot.data![index].date)),
+                            Text(
+                              DateFormat('MMM d, h:mm a').format(
+                                snapshot.data![index].date,
+                              ),
+                            ),
                           ],
                         ),
                         const SizedBox(height: 4),
@@ -150,9 +158,10 @@ class ChatDetailPage extends StatelessWidget {
                     child: TextField(
                       controller: myController,
                       decoration: const InputDecoration(
-                          hintText: "Write message...",
-                          hintStyle: TextStyle(color: Colors.black54),
-                          border: InputBorder.none),
+                        hintText: "Write message...",
+                        hintStyle: TextStyle(color: Colors.black54),
+                        border: InputBorder.none,
+                      ),
                     ),
                   ),
                   const SizedBox(
@@ -161,7 +170,9 @@ class ChatDetailPage extends StatelessWidget {
                   FloatingActionButton(
                     onPressed: () {
                       viewModel.saveMessage(
-                          chatRoomId, myController.value.text);
+                        chatRoomId,
+                        myController.value.text,
+                      );
                       myController.text = "";
                     },
                     backgroundColor: Colors.blue,

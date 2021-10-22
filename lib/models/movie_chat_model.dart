@@ -4,9 +4,10 @@ class MovieChat {
   final String description;
   final String imagePath;
 
-  const MovieChat(
-      {required this.id,
-      required this.name,
-      required this.description,
-      required this.imagePath});
+  const MovieChat({
+    required this.id,
+    required this.name,
+    required this.description,
+    required this.imagePath,
+  });
 }

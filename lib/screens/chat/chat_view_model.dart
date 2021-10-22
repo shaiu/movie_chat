@@ -23,7 +23,10 @@ class ChatViewModel {
       //message is new, append to list
       _messages.add(message);
       showNotification(
-          title: message.userName, body: message.message, payload: "payload");
+        title: message.userName,
+        body: message.message,
+        payload: "payload",
+      );
     } else {
       _messages[index] = message; //update existing message
     }

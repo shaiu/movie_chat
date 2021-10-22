@@ -25,10 +25,11 @@ void main() {
     await tester.pumpWidget(MyApp());
 
     expect(
-        find.byWidgetPredicate(
-          (Widget widget) => widget is ElevatedButton,
-          description: 'widget is ElevatedButton',
-        ),
-        findsOneWidget);
+      find.byWidgetPredicate(
+        (Widget widget) => widget is ElevatedButton,
+        description: 'widget is ElevatedButton',
+      ),
+      findsOneWidget,
+    );
   });
 }
